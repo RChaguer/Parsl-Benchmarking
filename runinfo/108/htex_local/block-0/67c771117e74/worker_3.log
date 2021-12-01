@@ -1,0 +1,17 @@
+2021-12-01 16:35:23.035 worker_log:503 Rank:3 [INFO]  Worker 3 started
+2021-12-01 16:35:23.048 worker_log:533 Rank:3 [INFO]  Received task 4
+2021-12-01 16:35:23.134 worker_log:551 Rank:3 [INFO]  Completed task 4
+2021-12-01 16:35:23.190 worker_log:533 Rank:3 [INFO]  Received task 9
+2021-12-01 16:35:23.278 worker_log:551 Rank:3 [INFO]  Completed task 9
+2021-12-01 16:35:23.354 worker_log:533 Rank:3 [INFO]  Received task 15
+2021-12-01 16:35:23.444 worker_log:551 Rank:3 [INFO]  Completed task 15
+2021-12-01 16:35:23.568 worker_log:533 Rank:3 [INFO]  Received task 21
+2021-12-01 16:35:23.657 worker_log:551 Rank:3 [INFO]  Completed task 21
+2021-12-01 16:35:23.805 worker_log:533 Rank:3 [INFO]  Received task 27
+2021-12-01 16:35:23.891 worker_log:551 Rank:3 [INFO]  Completed task 27
+2021-12-01 16:35:24.026 worker_log:533 Rank:3 [INFO]  Received task 33
+2021-12-01 16:35:24.115 worker_log:551 Rank:3 [INFO]  Completed task 33
+2021-12-01 16:35:24.254 worker_log:533 Rank:3 [INFO]  Received task 39
+2021-12-01 16:35:24.343 worker_log:551 Rank:3 [INFO]  Completed task 39
+2021-12-01 16:35:24.481 worker_log:533 Rank:3 [INFO]  Received task 45
+2021-12-01 16:35:24.570 worker_log:551 Rank:3 [INFO]  Completed task 45

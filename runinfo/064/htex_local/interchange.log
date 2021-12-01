@@ -1,0 +1,11 @@
+2021-12-01 16:29:30.759 interchange:166 [INFO]  Attempting connection to client at 127.0.0.1 on ports: 55991,55159,55577
+2021-12-01 16:29:30.759 interchange:180 [INFO]  Connected to client
+2021-12-01 16:29:30.760 interchange:210 [INFO]  Bound to ports 54170,54804 for incoming worker connections
+2021-12-01 16:29:30.760 interchange:225 [INFO]  Platform info: {'parsl_v': '1.1.0', 'python_v': '3.8.12', 'os': 'Linux', 'hostname': 'fedora', 'dir': '/home/rchaguer/EDT/parsl/Parsl-Benchmarking'}
+2021-12-01 16:29:30.760 interchange:373 [INFO]  Incoming ports bound
+2021-12-01 16:29:30.761 interchange:261 [INFO]  [TASK_PULL_THREAD] Starting
+2021-12-01 16:29:31.010 interchange:437 [INFO]  [MAIN] Adding manager: b'64d0b414a413' to ready queue
+2021-12-01 16:29:31.010 interchange:439 [INFO]  [MAIN] Registration info for manager b'64d0b414a413': {'parsl_v': '1.1.0', 'python_v': '3.8.12', 'worker_count': 6, 'uid': '64d0b414a413', 'block_id': '0', 'prefetch_capacity': 0, 'max_capacity': 6, 'os': 'Linux', 'hostname': 'fedora', 'dir': '/home/rchaguer/EDT/parsl/Parsl-Benchmarking', 'cpu_count': 6, 'total_memory': 7657222144, 'reg_time': datetime.datetime(2021, 12, 1, 16, 29, 31)}
+2021-12-01 16:29:31.010 interchange:457 [INFO]  [MAIN] Manager b'64d0b414a413' has compatible Parsl version 1.1.0
+2021-12-01 16:29:31.010 interchange:458 [INFO]  [MAIN] Manager b'64d0b414a413' has compatible Python version 3.8
+2021-12-01 16:29:31.024 interchange:342 [INFO]  [CMD] Received HOLD_WORKER for b'64d0b414a413'

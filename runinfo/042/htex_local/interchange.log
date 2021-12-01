@@ -1,0 +1,11 @@
+2021-12-01 16:26:20.294 interchange:166 [INFO]  Attempting connection to client at 127.0.0.1 on ports: 55440,55585,55136
+2021-12-01 16:26:20.296 interchange:180 [INFO]  Connected to client
+2021-12-01 16:26:20.296 interchange:210 [INFO]  Bound to ports 54163,54280 for incoming worker connections
+2021-12-01 16:26:20.296 interchange:225 [INFO]  Platform info: {'parsl_v': '1.1.0', 'python_v': '3.8.12', 'os': 'Linux', 'hostname': 'fedora', 'dir': '/home/rchaguer/EDT/parsl/Parsl-Benchmarking'}
+2021-12-01 16:26:20.297 interchange:373 [INFO]  Incoming ports bound
+2021-12-01 16:26:20.297 interchange:261 [INFO]  [TASK_PULL_THREAD] Starting
+2021-12-01 16:26:20.550 interchange:437 [INFO]  [MAIN] Adding manager: b'a779c2f91ea9' to ready queue
+2021-12-01 16:26:20.550 interchange:439 [INFO]  [MAIN] Registration info for manager b'a779c2f91ea9': {'parsl_v': '1.1.0', 'python_v': '3.8.12', 'worker_count': 6, 'uid': 'a779c2f91ea9', 'block_id': '0', 'prefetch_capacity': 0, 'max_capacity': 6, 'os': 'Linux', 'hostname': 'fedora', 'dir': '/home/rchaguer/EDT/parsl/Parsl-Benchmarking', 'cpu_count': 6, 'total_memory': 7657222144, 'reg_time': datetime.datetime(2021, 12, 1, 16, 26, 20)}
+2021-12-01 16:26:20.550 interchange:457 [INFO]  [MAIN] Manager b'a779c2f91ea9' has compatible Parsl version 1.1.0
+2021-12-01 16:26:20.550 interchange:458 [INFO]  [MAIN] Manager b'a779c2f91ea9' has compatible Python version 3.8
+2021-12-01 16:26:27.656 interchange:342 [INFO]  [CMD] Received HOLD_WORKER for b'a779c2f91ea9'

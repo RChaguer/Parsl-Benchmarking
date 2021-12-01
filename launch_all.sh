@@ -4,12 +4,12 @@ py=python3.8
 s_1=fibo.py
 s_2=array_f.py
 p=$(nproc --all)
-file_1=benchmark_fibo_$p
-file_2=benchmark_sq_$p
+file_1=benchmark2_fibo_$p
+file_2=benchmark2_sq_$p
 
 lscpu > full_setup_$p
 
-for n in 5 10 15 20 25 30 40
+for n in 5 8 10 12 15 20 
 do
     $py $s_1 py $n None $file_1
     for c in htex thread
@@ -20,11 +20,11 @@ do
 done
 
 
-for n in 5 10 25 50
+for n in 5 10 25
 do
-    for t_h in 8 64 256 512 1024
+    for t_h in 64 256 512 1024
     do
-        for dur in None 0.001 0.01
+        for dur in None 0.0001 0.001
         do
             for t in py t mp
             do

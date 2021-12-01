@@ -1,0 +1,324 @@
+2021-12-01 16:26:08.229 parsl.dataflow.dflow:84 [DEBUG]  Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    executors=[HighThroughputExecutor(
+        address=None, 
+        address_probe_timeout=None, 
+        cores_per_worker=1, 
+        cpu_affinity='none', 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='htex_local', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} --cpu-affinity {cpu_affinity} ', 
+        managed=True, 
+        max_workers=inf, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=LocalProvider(
+            channel=LocalChannel(
+                envs={}, 
+                script_dir=None, 
+                userhome='/home/rchaguer/EDT/parsl/Parsl-Benchmarking'
+            ), 
+            cmd_timeout=30, 
+            init_blocks=1, 
+            launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+            max_blocks=1, 
+            min_blocks=0, 
+            move_files=None, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            walltime='00:15:00', 
+            worker_init=''
+        ), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    )], 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    usage_tracking=False
+)
+2021-12-01 16:26:08.229 parsl.dataflow.dflow:86 [INFO]  Parsl version: 1.1.0
+2021-12-01 16:26:08.230 parsl.dataflow.usage_tracking.usage:125 [DEBUG]  Tracking status: False
+2021-12-01 16:26:08.230 parsl.dataflow.dflow:114 [INFO]  Run id is: 29044faa-0bda-4880-b7e0-add94fa25176
+2021-12-01 16:26:08.308 parsl.dataflow.memoization:164 [INFO]  App caching initialized
+2021-12-01 16:26:08.308 parsl.dataflow.strategy:127 [DEBUG]  Scaling strategy: simple
+2021-12-01 16:26:08.310 parsl.executors.high_throughput.executor:473 [DEBUG]  Starting queue management thread
+2021-12-01 16:26:08.310 parsl.executors.high_throughput.executor:357 [DEBUG]  [MTHREAD] queue management worker starting
+2021-12-01 16:26:08.310 parsl.executors.high_throughput.executor:477 [DEBUG]  Started queue management thread
+2021-12-01 16:26:08.319 parsl.executors.high_throughput.executor:318 [DEBUG]  Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 139675464562240)>
+2021-12-01 16:26:08.319 parsl.executors.high_throughput.executor:290 [DEBUG]  Launch command: process_worker_pool.py   -a 127.0.0.1,fedora,208.59.152.175,192.168.0.10 -p 0 -c 1 -m None --poll 10 --task_port=54634 --result_port=54797 --logdir=/home/rchaguer/EDT/parsl/Parsl-Benchmarking/runinfo/034/htex_local --block_id={block_id} --hb_period=30  --hb_threshold=120 --cpu-affinity none 
+2021-12-01 16:26:08.319 parsl.executors.high_throughput.executor:293 [DEBUG]  Starting HighThroughputExecutor with provider:
+LocalProvider(
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/home/rchaguer/EDT/parsl/Parsl-Benchmarking/runinfo/034/submit_scripts', 
+        userhome='/home/rchaguer/EDT/parsl/Parsl-Benchmarking'
+    ), 
+    cmd_timeout=30, 
+    init_blocks=1, 
+    launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+    max_blocks=1, 
+    min_blocks=0, 
+    move_files=None, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    walltime='00:15:00', 
+    worker_init=''
+)
+2021-12-01 16:26:08.321 parsl.providers.local.local:219 [DEBUG]  Launching in remote mode
+2021-12-01 16:26:08.328 parsl.executors.high_throughput.executor:624 [DEBUG]  Launched block 0->58400
+2021-12-01 16:26:08.329 parsl.dataflow.task_status_poller:114 [DEBUG]  Adding executor htex_local
+2021-12-01 16:26:08.329 parsl.dataflow.dflow:795 [DEBUG]  Task 0 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.329 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.329 parsl.dataflow.dflow:874 [INFO]  Task 0 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.329 parsl.dataflow.dflow:882 [DEBUG]  Task 0 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08bbf68640 state=pending>>
+2021-12-01 16:26:08.329 parsl.dataflow.memoization:229 [DEBUG]  Task 0 will not be memoized
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:795 [DEBUG]  Task 1 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:587 [INFO]  Task 0 launched on executor _parsl_internal
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:874 [INFO]  Task 1 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:882 [DEBUG]  Task 1 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08bbf68cd0 state=pending>>
+2021-12-01 16:26:08.330 parsl.dataflow.memoization:229 [DEBUG]  Task 1 will not be memoized
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:795 [DEBUG]  Task 2 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:587 [INFO]  Task 1 launched on executor _parsl_internal
+2021-12-01 16:26:08.330 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:795 [DEBUG]  Task 3 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:874 [INFO]  Task 2 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:882 [DEBUG]  Task 2 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9ef62b0 state=pending>>
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:874 [INFO]  Task 3 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.331 parsl.dataflow.memoization:229 [DEBUG]  Task 2 will not be memoized
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:882 [DEBUG]  Task 3 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9ef62e0 state=pending>>
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:795 [DEBUG]  Task 4 will be sent to executor htex_local
+2021-12-01 16:26:08.331 parsl.dataflow.memoization:229 [DEBUG]  Task 3 will not be memoized
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:587 [INFO]  Task 2 launched on executor _parsl_internal
+2021-12-01 16:26:08.331 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:795 [DEBUG]  Task 5 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:795 [DEBUG]  Task 6 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:587 [INFO]  Task 3 launched on executor _parsl_internal
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:874 [INFO]  Task 4 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:795 [DEBUG]  Task 7 will be sent to executor htex_local
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:882 [DEBUG]  Task 4 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9ef6ac0 state=pending>>
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:874 [INFO]  Task 5 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:874 [INFO]  Task 6 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.332 parsl.dataflow.memoization:229 [DEBUG]  Task 4 will not be memoized
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:882 [DEBUG]  Task 5 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9eff160 state=pending>>
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:882 [DEBUG]  Task 6 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9ef6b50 state=pending>>
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:874 [INFO]  Task 7 submitted for App add, waiting on task 1, task 3
+2021-12-01 16:26:08.332 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1,)
+2021-12-01 16:26:08.332 parsl.dataflow.memoization:229 [DEBUG]  Task 5 will not be memoized
+2021-12-01 16:26:08.333 parsl.dataflow.dflow:587 [INFO]  Task 4 launched on executor htex_local
+2021-12-01 16:26:08.332 parsl.dataflow.memoization:229 [DEBUG]  Task 6 will not be memoized
+2021-12-01 16:26:08.332 parsl.dataflow.dflow:882 [DEBUG]  Task 7 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9eff190 state=pending>>
+2021-12-01 16:26:08.333 parsl.dataflow.dflow:587 [INFO]  Task 5 launched on executor _parsl_internal
+2021-12-01 16:26:08.333 parsl.dataflow.dflow:795 [DEBUG]  Task 8 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:795 [DEBUG]  Task 9 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:795 [DEBUG]  Task 10 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:587 [INFO]  Task 6 launched on executor _parsl_internal
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:874 [INFO]  Task 8 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:874 [INFO]  Task 9 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:795 [DEBUG]  Task 11 will be sent to executor htex_local
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:874 [INFO]  Task 10 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:882 [DEBUG]  Task 8 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9effc70 state=pending>>
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:882 [DEBUG]  Task 9 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f090a0 state=pending>>
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:882 [DEBUG]  Task 10 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9effb50 state=pending>>
+2021-12-01 16:26:08.334 parsl.dataflow.memoization:229 [DEBUG]  Task 8 will not be memoized
+2021-12-01 16:26:08.334 parsl.dataflow.memoization:229 [DEBUG]  Task 9 will not be memoized
+2021-12-01 16:26:08.334 parsl.dataflow.dflow:874 [INFO]  Task 11 submitted for App add, waiting on task 2, task 6
+2021-12-01 16:26:08.335 parsl.dataflow.memoization:229 [DEBUG]  Task 10 will not be memoized
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:587 [INFO]  Task 8 launched on executor _parsl_internal
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:795 [DEBUG]  Task 12 will be sent to executor htex_local
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:795 [DEBUG]  Task 13 will be sent to executor htex_local
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:882 [DEBUG]  Task 11 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f09310 state=pending>>
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:587 [INFO]  Task 9 launched on executor _parsl_internal
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:795 [DEBUG]  Task 14 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:587 [INFO]  Task 10 launched on executor _parsl_internal
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:795 [DEBUG]  Task 15 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:795 [DEBUG]  Task 16 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.335 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:795 [DEBUG]  Task 17 will be sent to executor htex_local
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:874 [INFO]  Task 12 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:874 [INFO]  Task 13 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:874 [INFO]  Task 14 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:874 [INFO]  Task 15 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:882 [DEBUG]  Task 12 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f09be0 state=pending>>
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:882 [DEBUG]  Task 13 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f09d30 state=pending>>
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:874 [INFO]  Task 16 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:882 [DEBUG]  Task 14 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9ef6a30 state=pending>>
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:874 [INFO]  Task 17 submitted for App add, waiting on task 5, task 10
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:882 [DEBUG]  Task 15 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f097c0 state=pending>>
+2021-12-01 16:26:08.336 parsl.dataflow.memoization:229 [DEBUG]  Task 12 will not be memoized
+2021-12-01 16:26:08.336 parsl.dataflow.memoization:229 [DEBUG]  Task 13 will not be memoized
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:882 [DEBUG]  Task 16 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f09040 state=pending>>
+2021-12-01 16:26:08.336 parsl.dataflow.memoization:229 [DEBUG]  Task 14 will not be memoized
+2021-12-01 16:26:08.336 parsl.dataflow.dflow:882 [DEBUG]  Task 17 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f13130 state=pending>>
+2021-12-01 16:26:08.336 parsl.dataflow.memoization:229 [DEBUG]  Task 15 will not be memoized
+2021-12-01 16:26:08.337 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args ()
+2021-12-01 16:26:08.337 parsl.dataflow.memoization:229 [DEBUG]  Task 16 will not be memoized
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:587 [INFO]  Task 12 launched on executor htex_local
+2021-12-01 16:26:08.337 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args ()
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:587 [INFO]  Task 13 launched on executor htex_local
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:587 [INFO]  Task 14 launched on executor _parsl_internal
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:795 [DEBUG]  Task 18 will be sent to executor htex_local
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:587 [INFO]  Task 15 launched on executor _parsl_internal
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:795 [DEBUG]  Task 19 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:587 [INFO]  Task 16 launched on executor _parsl_internal
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:795 [DEBUG]  Task 20 will be sent to executor htex_local
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:795 [DEBUG]  Task 21 will be sent to executor htex_local
+2021-12-01 16:26:08.337 parsl.dataflow.dflow:795 [DEBUG]  Task 22 will be sent to executor htex_local
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:795 [DEBUG]  Task 23 will be sent to executor htex_local
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:874 [INFO]  Task 18 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:874 [INFO]  Task 19 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:882 [DEBUG]  Task 18 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f13be0 state=pending>>
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:874 [INFO]  Task 20 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:874 [INFO]  Task 21 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:874 [INFO]  Task 22 submitted for App add, waiting on task 8, task 15
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:882 [DEBUG]  Task 19 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f13a90 state=pending>>
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:874 [INFO]  Task 23 submitted for App add, waiting on task 9, task 16
+2021-12-01 16:26:08.338 parsl.dataflow.memoization:229 [DEBUG]  Task 18 will not be memoized
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:882 [DEBUG]  Task 20 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f1c130 state=pending>>
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:882 [DEBUG]  Task 21 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f1c2b0 state=pending>>
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:882 [DEBUG]  Task 22 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f13d60 state=pending>>
+2021-12-01 16:26:08.338 parsl.dataflow.memoization:229 [DEBUG]  Task 19 will not be memoized
+2021-12-01 16:26:08.338 parsl.dataflow.dflow:882 [DEBUG]  Task 23 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f13eb0 state=pending>>
+2021-12-01 16:26:08.338 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1,)
+2021-12-01 16:26:08.338 parsl.dataflow.memoization:229 [DEBUG]  Task 20 will not be memoized
+2021-12-01 16:26:08.339 parsl.dataflow.memoization:229 [DEBUG]  Task 21 will not be memoized
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:587 [INFO]  Task 18 launched on executor htex_local
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:587 [INFO]  Task 19 launched on executor _parsl_internal
+2021-12-01 16:26:08.339 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1,)
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:795 [DEBUG]  Task 24 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:874 [INFO]  Task 24 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:882 [DEBUG]  Task 24 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f1ccd0 state=pending>>
+2021-12-01 16:26:08.339 parsl.dataflow.memoization:229 [DEBUG]  Task 24 will not be memoized
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:795 [DEBUG]  Task 25 will be sent to executor htex_local
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:587 [INFO]  Task 20 launched on executor htex_local
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.339 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1,)
+2021-12-01 16:26:08.339 parsl.dataflow.dflow:874 [INFO]  Task 25 submitted for App add, waiting on task 14, task 19
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:882 [DEBUG]  Task 25 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f1cb20 state=pending>>
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:587 [INFO]  Task 21 launched on executor htex_local
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:587 [INFO]  Task 24 launched on executor _parsl_internal
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:795 [DEBUG]  Task 26 will be sent to executor htex_local
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:795 [DEBUG]  Task 27 will be sent to executor _parsl_internal
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:874 [INFO]  Task 26 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:874 [INFO]  Task 27 submitted for App fibonacci, not waiting on any dependency
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:882 [DEBUG]  Task 26 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f21340 state=pending>>
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:882 [DEBUG]  Task 27 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f212b0 state=pending>>
+2021-12-01 16:26:08.340 parsl.dataflow.memoization:229 [DEBUG]  Task 26 will not be memoized
+2021-12-01 16:26:08.340 parsl.dataflow.memoization:229 [DEBUG]  Task 27 will not be memoized
+2021-12-01 16:26:08.340 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args ()
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:587 [INFO]  Task 26 launched on executor htex_local
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:587 [INFO]  Task 27 launched on executor _parsl_internal
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:795 [DEBUG]  Task 28 will be sent to executor htex_local
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.340 parsl.dataflow.dflow:874 [INFO]  Task 28 submitted for App add, waiting on task 24, task 27
+2021-12-01 16:26:08.341 parsl.dataflow.dflow:882 [DEBUG]  Task 28 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f21880 state=pending>>
+2021-12-01 16:26:08.341 parsl.dataflow.dflow:795 [DEBUG]  Task 29 will be sent to executor htex_local
+2021-12-01 16:26:08.341 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:26:08.341 parsl.dataflow.dflow:874 [INFO]  Task 29 submitted for App add, not waiting on any dependency
+2021-12-01 16:26:08.341 parsl.dataflow.dflow:882 [DEBUG]  Task 29 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7f08b9f1c220 state=pending>>
+2021-12-01 16:26:08.341 parsl.dataflow.memoization:229 [DEBUG]  Task 29 will not be memoized
+2021-12-01 16:26:08.341 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1,)
+2021-12-01 16:26:08.341 parsl.dataflow.dflow:587 [INFO]  Task 29 launched on executor htex_local
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 12 completed (launched -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 8 completed (joining -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 4 completed (launched -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 2 completed (joining -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 13 completed (launched -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 9 completed (joining -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 18 completed (launched -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 14 completed (joining -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 21 completed (launched -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.dflow:431 [INFO]  Task 16 completed (joining -> exec_done)
+2021-12-01 16:26:08.564 parsl.dataflow.memoization:229 [DEBUG]  Task 23 will not be memoized
+2021-12-01 16:26:08.564 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (0, 1)
+2021-12-01 16:26:08.565 parsl.dataflow.dflow:587 [INFO]  Task 23 launched on executor htex_local
+2021-12-01 16:26:08.565 parsl.dataflow.dflow:431 [INFO]  Task 20 completed (launched -> exec_done)
+2021-12-01 16:26:08.565 parsl.dataflow.dflow:431 [INFO]  Task 15 completed (joining -> exec_done)
+2021-12-01 16:26:08.565 parsl.dataflow.memoization:229 [DEBUG]  Task 22 will not be memoized
+2021-12-01 16:26:08.565 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (0, 1)
+2021-12-01 16:26:08.565 parsl.dataflow.dflow:587 [INFO]  Task 22 launched on executor htex_local
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 23 completed (launched -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 6 completed (joining -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.memoization:229 [DEBUG]  Task 11 will not be memoized
+2021-12-01 16:26:08.594 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1, 1)
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:587 [INFO]  Task 11 launched on executor htex_local
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 26 completed (launched -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 24 completed (joining -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 22 completed (launched -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 5 completed (joining -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 29 completed (launched -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.dflow:431 [INFO]  Task 27 completed (joining -> exec_done)
+2021-12-01 16:26:08.594 parsl.dataflow.memoization:229 [DEBUG]  Task 28 will not be memoized
+2021-12-01 16:26:08.594 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (0, 1)
+2021-12-01 16:26:08.595 parsl.dataflow.dflow:587 [INFO]  Task 28 launched on executor htex_local
+2021-12-01 16:26:08.614 parsl.dataflow.dflow:431 [INFO]  Task 11 completed (launched -> exec_done)
+2021-12-01 16:26:08.614 parsl.dataflow.dflow:431 [INFO]  Task 1 completed (joining -> exec_done)
+2021-12-01 16:26:08.614 parsl.dataflow.dflow:431 [INFO]  Task 28 completed (launched -> exec_done)
+2021-12-01 16:26:08.614 parsl.dataflow.dflow:431 [INFO]  Task 19 completed (joining -> exec_done)
+2021-12-01 16:26:08.614 parsl.dataflow.memoization:229 [DEBUG]  Task 25 will not be memoized
+2021-12-01 16:26:08.614 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1, 1)
+2021-12-01 16:26:08.615 parsl.dataflow.dflow:587 [INFO]  Task 25 launched on executor htex_local
+2021-12-01 16:26:08.635 parsl.dataflow.dflow:431 [INFO]  Task 25 completed (launched -> exec_done)
+2021-12-01 16:26:08.636 parsl.dataflow.dflow:431 [INFO]  Task 10 completed (joining -> exec_done)
+2021-12-01 16:26:08.636 parsl.dataflow.memoization:229 [DEBUG]  Task 17 will not be memoized
+2021-12-01 16:26:08.636 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (1, 2)
+2021-12-01 16:26:08.636 parsl.dataflow.dflow:587 [INFO]  Task 17 launched on executor htex_local
+2021-12-01 16:26:08.657 parsl.dataflow.dflow:431 [INFO]  Task 17 completed (launched -> exec_done)
+2021-12-01 16:26:08.657 parsl.dataflow.dflow:431 [INFO]  Task 3 completed (joining -> exec_done)
+2021-12-01 16:26:08.657 parsl.dataflow.memoization:229 [DEBUG]  Task 7 will not be memoized
+2021-12-01 16:26:08.657 parsl.executors.high_throughput.executor:562 [DEBUG]  Pushing function <function add at 0x7f08bc02e9d0> to queue with args (2, 3)
+2021-12-01 16:26:08.658 parsl.dataflow.dflow:587 [INFO]  Task 7 launched on executor htex_local
+2021-12-01 16:26:08.679 parsl.dataflow.dflow:431 [INFO]  Task 7 completed (launched -> exec_done)
+2021-12-01 16:26:08.679 parsl.dataflow.dflow:431 [INFO]  Task 0 completed (joining -> exec_done)
+2021-12-01 16:26:08.684 parsl.dataflow.dflow:1030 [INFO]  DFK cleanup initiated
+2021-12-01 16:26:08.684 parsl.dataflow.dflow:920 [INFO]  Summary of tasks in DFK:
+2021-12-01 16:26:08.684 parsl.dataflow.dflow:934 [INFO]  Tasks in state States.exec_done: 30
+2021-12-01 16:26:08.684 parsl.dataflow.dflow:940 [INFO]  End of summary
+2021-12-01 16:26:08.684 parsl.dataflow.dflow:1054 [INFO]  Terminating flow_control and strategy threads
+2021-12-01 16:26:08.685 parsl.executors.high_throughput.executor:692 [DEBUG]  Current blocks : {'0': '58400'}
+2021-12-01 16:26:08.685 parsl.executors.high_throughput.executor:526 [DEBUG]  [HOLD_BLOCK]: Sending hold to manager: cde058a4ec59
+2021-12-01 16:26:08.686 parsl.executors.high_throughput.executor:495 [DEBUG]  Sent hold request to worker: cde058a4ec59
+2021-12-01 16:26:08.686 parsl.providers.local.local:268 [DEBUG]  Terminating job/proc_id: 58400
+2021-12-01 16:26:08.707 parsl.executors.high_throughput.executor:731 [INFO]  Attempting HighThroughputExecutor shutdown
+2021-12-01 16:26:08.708 parsl.executors.high_throughput.executor:733 [INFO]  Finished HighThroughputExecutor shutdown attempt
+2021-12-01 16:26:08.708 parsl.executors.threads:105 [DEBUG]  Done with executor shutdown
+2021-12-01 16:26:08.708 parsl.dataflow.dflow:1083 [INFO]  DFK cleanup complete

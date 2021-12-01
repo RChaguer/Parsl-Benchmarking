@@ -1,0 +1,72 @@
+2021-12-01 16:29:48.728 parsl.dataflow.dflow:84 [DEBUG]  Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    executors=[ThreadPoolExecutor(
+        label='threads', 
+        managed=True, 
+        max_threads=2, 
+        storage_access=None, 
+        thread_name_prefix='', 
+        working_dir=None
+    )], 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    usage_tracking=False
+)
+2021-12-01 16:29:48.728 parsl.dataflow.dflow:86 [INFO]  Parsl version: 1.1.0
+2021-12-01 16:29:48.728 parsl.dataflow.usage_tracking.usage:125 [DEBUG]  Tracking status: False
+2021-12-01 16:29:48.729 parsl.dataflow.dflow:114 [INFO]  Run id is: c24e0141-4abf-4a2a-8094-6841db7ec6f2
+2021-12-01 16:29:48.766 parsl.dataflow.memoization:164 [INFO]  App caching initialized
+2021-12-01 16:29:48.766 parsl.dataflow.strategy:127 [DEBUG]  Scaling strategy: simple
+2021-12-01 16:29:48.767 parsl.dataflow.dflow:795 [DEBUG]  Task 0 will be sent to executor threads
+2021-12-01 16:29:48.767 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:29:48.767 parsl.dataflow.dflow:874 [INFO]  Task 0 submitted for App array_apply_p, not waiting on any dependency
+2021-12-01 16:29:48.767 parsl.dataflow.dflow:882 [DEBUG]  Task 0 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7fc5a6bbc580 state=pending>>
+2021-12-01 16:29:48.767 parsl.dataflow.memoization:229 [DEBUG]  Task 0 will not be memoized
+2021-12-01 16:29:48.767 parsl.dataflow.dflow:587 [INFO]  Task 0 launched on executor threads
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:795 [DEBUG]  Task 1 will be sent to executor threads
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:874 [INFO]  Task 1 submitted for App array_apply_p, not waiting on any dependency
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:882 [DEBUG]  Task 1 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7fc5a6bbca00 state=pending>>
+2021-12-01 16:29:48.768 parsl.dataflow.memoization:229 [DEBUG]  Task 1 will not be memoized
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:587 [INFO]  Task 1 launched on executor threads
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:795 [DEBUG]  Task 2 will be sent to executor threads
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:874 [INFO]  Task 2 submitted for App array_apply_p, not waiting on any dependency
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:882 [DEBUG]  Task 2 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7fc5a6bbcf40 state=pending>>
+2021-12-01 16:29:48.768 parsl.dataflow.memoization:229 [DEBUG]  Task 2 will not be memoized
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:587 [INFO]  Task 2 launched on executor threads
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:795 [DEBUG]  Task 3 will be sent to executor threads
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:874 [INFO]  Task 3 submitted for App array_apply_p, not waiting on any dependency
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:882 [DEBUG]  Task 3 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7fc5a6b49250 state=pending>>
+2021-12-01 16:29:48.768 parsl.dataflow.memoization:229 [DEBUG]  Task 3 will not be memoized
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:587 [INFO]  Task 3 launched on executor threads
+2021-12-01 16:29:48.768 parsl.dataflow.dflow:795 [DEBUG]  Task 4 will be sent to executor threads
+2021-12-01 16:29:48.769 parsl.dataflow.dflow:624 [DEBUG]  Adding output dependencies
+2021-12-01 16:29:48.769 parsl.dataflow.dflow:874 [INFO]  Task 4 submitted for App array_apply_p, not waiting on any dependency
+2021-12-01 16:29:48.769 parsl.dataflow.dflow:882 [DEBUG]  Task 4 set to pending state with AppFuture: <AppFuture super=<AppFuture at 0x7fc5a6b494f0 state=pending>>
+2021-12-01 16:29:48.769 parsl.dataflow.memoization:229 [DEBUG]  Task 4 will not be memoized
+2021-12-01 16:29:48.769 parsl.dataflow.dflow:587 [INFO]  Task 4 launched on executor threads
+2021-12-01 16:29:49.880 parsl.dataflow.dflow:431 [INFO]  Task 1 completed (launched -> exec_done)
+2021-12-01 16:29:49.881 parsl.dataflow.dflow:431 [INFO]  Task 0 completed (launched -> exec_done)
+2021-12-01 16:29:51.001 parsl.dataflow.dflow:431 [INFO]  Task 3 completed (launched -> exec_done)
+2021-12-01 16:29:51.002 parsl.dataflow.dflow:431 [INFO]  Task 2 completed (launched -> exec_done)
+2021-12-01 16:29:52.119 parsl.dataflow.dflow:431 [INFO]  Task 4 completed (launched -> exec_done)
+2021-12-01 16:29:52.124 parsl.dataflow.dflow:1030 [INFO]  DFK cleanup initiated
+2021-12-01 16:29:52.124 parsl.dataflow.dflow:920 [INFO]  Summary of tasks in DFK:
+2021-12-01 16:29:52.124 parsl.dataflow.dflow:934 [INFO]  Tasks in state States.exec_done: 5
+2021-12-01 16:29:52.124 parsl.dataflow.dflow:940 [INFO]  End of summary
+2021-12-01 16:29:52.124 parsl.dataflow.dflow:1054 [INFO]  Terminating flow_control and strategy threads
+2021-12-01 16:29:52.125 parsl.executors.threads:105 [DEBUG]  Done with executor shutdown
+2021-12-01 16:29:52.125 parsl.executors.threads:105 [DEBUG]  Done with executor shutdown
+2021-12-01 16:29:52.125 parsl.dataflow.dflow:1083 [INFO]  DFK cleanup complete

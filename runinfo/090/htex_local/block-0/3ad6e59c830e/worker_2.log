@@ -1,0 +1,3 @@
+2021-12-01 16:31:44.371 worker_log:503 Rank:2 [INFO]  Worker 2 started
+2021-12-01 16:31:44.382 worker_log:533 Rank:2 [INFO]  Received task 3
+2021-12-01 16:31:44.553 worker_log:551 Rank:2 [INFO]  Completed task 3
