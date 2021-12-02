@@ -1,7 +1,0 @@
-2021-12-01 16:31:11.068 worker_log:503 Rank:4 [INFO]  Worker 4 started
-2021-12-01 16:31:11.078 worker_log:533 Rank:4 [INFO]  Received task 4
-2021-12-01 16:31:11.165 worker_log:551 Rank:4 [INFO]  Completed task 4
-2021-12-01 16:31:11.222 worker_log:533 Rank:4 [INFO]  Received task 11
-2021-12-01 16:31:11.308 worker_log:551 Rank:4 [INFO]  Completed task 11
-2021-12-01 16:31:11.364 worker_log:533 Rank:4 [INFO]  Received task 16
-2021-12-01 16:31:11.452 worker_log:551 Rank:4 [INFO]  Completed task 16

@@ -3,6 +3,7 @@ import pandas as pd
 from parsl.app.app import python_app, join_app
 from parsl import load
 from algos import fibonacci_i, fibonacci_r, benchFunc
+import configs as cfg
 
 
 def benchParslFunc(f, e, label="algo"):
@@ -63,14 +64,15 @@ if __name__ == '__main__':
         n = int(args['n'])
     else:
         n = 10
+
     if args.get('c', "") == 'htex':
         c = "htex"
-        from parsl.configs.htex_local import config
-        load(config)
+        # from parsl.configs.htex_local import config
+        load(cfg.h_config)
     elif args.get('c', "") == 'thread':
         c = "thread"
-        from parsl.configs.local_threads import config
-        load(config)
+        # from parsl.configs.local_threads import config
+        load(cfg.t_config)
     else:
         c = ""
 

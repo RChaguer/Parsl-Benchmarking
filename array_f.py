@@ -4,7 +4,7 @@ from multiprocessing import Process
 import pandas as pd
 from parsl.app.app import python_app
 from parsl import load
-
+import configs as cfg
 
 def benchFunc(f, e, dur=None, label="algo"):
     t1 = perf_counter()
@@ -139,12 +139,12 @@ if __name__ == '__main__':
 
     if args.get('c', "") == 'htex':
         c = "htex"
-        from parsl.configs.htex_local import config
-        load(config)
+        # from parsl.configs.htex_local import config
+        load(cfg.h_config)
     elif args.get('c', "") == 'thread':
         c = "thread"
-        from parsl.configs.local_threads import config
-        load(config)
+        # from parsl.configs.local_threads import config
+        load(cfg.t_config)
     else:
         c = ""
 

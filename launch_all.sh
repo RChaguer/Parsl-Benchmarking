@@ -4,8 +4,8 @@ py=python3.8
 s_1=fibo.py
 s_2=array_f.py
 p=$(nproc --all)
-file_1=benchmark2_fibo_$p
-file_2=benchmark2_sq_$p
+file_1=benchmark_fibo_$p
+file_2=benchmark_sq_$p
 
 lscpu > full_setup_$p
 
