@@ -5,6 +5,7 @@ from parsl import load
 from algos import fibonacci_i, fibonacci_r, benchFunc
 import configs as cfg
 
+outputFolder = "bench_outputs/"
 
 def benchParslFunc(f, e, label="algo"):
     t1 = perf_counter()
@@ -42,7 +43,7 @@ def test_py_fibonacci(n, saveFile=None):
                             ['py_rec', n, p_r, r_r],
                             ['py_iter', n, p_i, r_i],
                         ], columns=column_names)
-        df.to_csv(f'{saveFile}.csv', mode='a', index=False, header=False)
+        df.to_csv(f'{outputFolder}{saveFile}.csv', mode='a', index=False, header=False)
 
 
 def test_parsl_fibonacci(n, saveFile=None, c=""):
@@ -54,7 +55,7 @@ def test_parsl_fibonacci(n, saveFile=None, c=""):
         df = pd.DataFrame([
                             [f'parsl_{c}', n, p_c, r_p]
                         ], columns=column_names)
-        df.to_csv(f'{saveFile}.csv', mode='a', index=False, header=False)
+        df.to_csv(f'{outputFolder}{saveFile}.csv', mode='a', index=False, header=False)
 
 if __name__ == '__main__':
     import sys

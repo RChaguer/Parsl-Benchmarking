@@ -1,13 +1,13 @@
 #! /bin/bash
 
 py=python3.8
-s_1=fibo.py
-s_2=array_f.py
+s_1=scripts/fibo.py
+s_2=scripts/array_f.py
 p=$(nproc --all)
 file_1=benchmark_fibo_$p
 file_2=benchmark_sq_$p
 
-lscpu > full_setup_$p
+lscpu > bench_configs/full_setup_$p
 
 for n in 5 8 10 12 15 20 
 do
@@ -38,3 +38,5 @@ do
     done
     echo "Testing Done for n :" $n 
 done
+
+rm -rf runinfo

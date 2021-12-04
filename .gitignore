@@ -1,2 +1,2 @@
 runinfo/*
-*.csv
+__pycache__

@@ -6,6 +6,8 @@ from parsl.app.app import python_app
 from parsl import load
 import configs as cfg
 
+outputFolder = "bench_outputs/"
+
 def benchFunc(f, e, dur=None, label="algo"):
     t1 = perf_counter()
     f(e, dur)
@@ -79,7 +81,7 @@ def test_py_array_square(n, dur=None, saveFile=None):
         df = pd.DataFrame([
                             ['py', len(n), t_h, dur, p_i],
                         ], columns=column_names)
-        df.to_csv(f'{saveFile}.csv', mode='a', index=False, header=False)
+        df.to_csv(f'{outputFolder}{saveFile}.csv', mode='a', index=False, header=False)
 
 
 def test_parsl_array_square(n, t_h, dur=None, saveFile=None, c=""):
@@ -91,7 +93,7 @@ def test_parsl_array_square(n, t_h, dur=None, saveFile=None, c=""):
         df = pd.DataFrame([
                             [f'parsl_{c}', len(n), t_h, dur, p_c]
                         ], columns=column_names)
-        df.to_csv(f'{saveFile}.csv', mode='a', index=False, header=False)
+        df.to_csv(f'{outputFolder}{saveFile}.csv', mode='a', index=False, header=False)
 
 
 def test_threading_array_square(n, t_h, dur=None, saveFile=None, c=""):
@@ -103,7 +105,7 @@ def test_threading_array_square(n, t_h, dur=None, saveFile=None, c=""):
         df = pd.DataFrame([
                             ['threading', len(n), t_h, dur, p_c]
                         ], columns=column_names)
-        df.to_csv(f'{saveFile}.csv', mode='a', index=False, header=False)
+        df.to_csv(f'{outputFolder}{saveFile}.csv', mode='a', index=False, header=False)
 
 
 def test_multiprocess_array_square(n, t_h, dur=None, saveFile=None, c=""):
@@ -115,7 +117,7 @@ def test_multiprocess_array_square(n, t_h, dur=None, saveFile=None, c=""):
         df = pd.DataFrame([
                             ['multiprocess', len(n), t_h, dur, p_c]
                         ], columns=column_names)
-        df.to_csv(f'{saveFile}.csv', mode='a', index=False, header=False)
+        df.to_csv(f'{outputFolder}{saveFile}.csv', mode='a', index=False, header=False)
 
 
 if __name__ == '__main__':
